@@ -23,7 +23,7 @@ resource "aws_instance" "bimbo_instance" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "testInstance"
+    Name = "Instance"
   }
 }
 
