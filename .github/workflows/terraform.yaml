@@ -4,13 +4,11 @@ on:
  push:
    branches:
    - main
-   paths:
-   - terraform/**
+
  pull_request:
    branches:
    - main
-   paths:
-   - terraform/**
+  
  workflow_dispatch:
  
 env:
@@ -24,12 +22,8 @@ jobs:
  terraform:
    name: "Terraform Infrastructure Change Management"
    runs-on: ubuntu-latest
-   defaults:
-     run:
-       shell: bash
-       # We keep Terraform files in the terraform directory.
-       working-directory: ./terraform
- 
+
+   
    steps:
      - name: Checkout the repository to the runner
        uses: actions/checkout@v2
